@@ -1,0 +1,126 @@
+{
+  "name": "vscode-note-bookmarks",
+  "displayName": "vscode-note-bookmarks",
+  "description": "可自由组织的树形结构的书签。",
+  "version": "0.0.1",
+  "publisher": "maq",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maq128/vscode-note-bookmarks.git"
+  },
+  "author": "maq",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "note-bookmarks-bar",
+          "title": "笔记书签",
+          "icon": "resources/logo.png"
+        }
+      ]
+    },
+    "views": {
+      "note-bookmarks-bar": [
+        {
+          "id": "noteBookmarks.noteBookmarksTree",
+          "name": "笔记书签",
+          "icon": "resources/logo.png",
+          "contextualTitle": "笔记书签"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "noteBookmarks.addGroup",
+        "title": "添加分组",
+        "icon": "$(add)"
+      },
+      {
+        "command": "noteBookmarks.collapseAll",
+        "title": "全部折叠",
+        "icon": "$(collapse-all)"
+      },
+      {
+        "command": "noteBookmarks.gotoBookmark",
+        "title": "跳转到书签"
+      },
+      {
+        "command": "noteBookmarks.addBookmark",
+        "title": "添加笔记书签"
+      },
+      {
+        "command": "noteBookmarks.editBookmark",
+        "title": "编辑书签",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "noteBookmarks.removeBookmark",
+        "title": "删除书签",
+        "icon": "$(trash)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "noteBookmarks.addBookmark",
+          "when": "editorTextFocus",
+          "group": "4_selection"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "noteBookmarks.addGroup",
+          "when": "view == noteBookmarks.noteBookmarksTree",
+          "group": "navigation@1"
+        },
+        {
+          "command": "noteBookmarks.collapseAll",
+          "when": "view == noteBookmarks.noteBookmarksTree",
+          "group": "navigation@2"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "noteBookmarks.editBookmark",
+          "when": "view == noteBookmarks.noteBookmarksTree",
+          "group": "inline@1"
+        },
+        {
+          "command": "noteBookmarks.removeBookmark",
+          "when": "view == noteBookmarks.noteBookmarksTree",
+          "group": "inline@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.34",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vscode/vsce": "^2.15.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.4.2",
+    "vsce": "^2.15.0"
+  }
+}

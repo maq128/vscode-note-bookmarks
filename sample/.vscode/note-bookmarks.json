@@ -1,0 +1,84 @@
+[
+  {
+    "label": "第 1 组",
+    "children": [
+      {
+        "label": "第一行",
+        "filepath": "index.txt",
+        "line": 0,
+        "character": 3,
+        "text": "第一行"
+      },
+      {
+        "label": "第三行",
+        "filepath": "index.txt",
+        "line": 2,
+        "character": 3,
+        "text": "第三行"
+      },
+      {
+        "label": "第五行",
+        "filepath": "index.txt",
+        "line": 4,
+        "character": 3,
+        "text": "第五行"
+      }
+    ]
+  },
+  {
+    "label": "第十行",
+    "filepath": "index.txt",
+    "line": 9,
+    "character": 3,
+    "text": "第十行",
+    "children": [
+      {
+        "label": "第十一行",
+        "filepath": "index.txt",
+        "line": 10,
+        "character": 4,
+        "text": "第十一行"
+      },
+      {
+        "label": "第十三行",
+        "filepath": "index.txt",
+        "line": 12,
+        "character": 4,
+        "text": "第十三行"
+      },
+      {
+        "label": "第十五行",
+        "filepath": "index.txt",
+        "line": 14,
+        "character": 4,
+        "text": "第十五行"
+      }
+    ]
+  },
+  {
+    "label": "第 3 组",
+    "children": [
+      {
+        "label": "第二十一行",
+        "filepath": "index.txt",
+        "line": 20,
+        "character": 5,
+        "text": "第二十一行"
+      },
+      {
+        "label": "第二十三行",
+        "filepath": "index.txt",
+        "line": 22,
+        "character": 5,
+        "text": "第二十三行"
+      },
+      {
+        "label": "第二十五行",
+        "filepath": "index.txt",
+        "line": 24,
+        "character": 5,
+        "text": "第二十五行"
+      }
+    ]
+  }
+]
